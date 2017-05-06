@@ -1,1 +1,150 @@
-ss
+- Python is interpreted and
+not type safe. Do not
+use the var keyword.
+
+- Python executes a program line by line top down
+
+- you can cast in python with int(object/item/variable) string(), etc.
+the casting is a function in python.
+EX: float(), int(), string(), etc.
+
+NOTE: it is int() not (int) like casting in C#
+
+- In python division outputs a float
+
+- for exponents use ** so 3**2 = 9
+- Remember to use brackets if you want math to happen in a certain order
+
+- you can use type() as a function to get somethings type
+
+**IMPORTANT**: You can do dir(variable that has a type) to see all methods associated
+with that type. So dir(stringvalue) will show you all of the string
+methods
+
+**IMPORTANT**:
+- You can do help(type.method) to see an explanation of what something
+does, how to use it, etc. Square brackets denote optional parameters
+
+- string concatenation works the same (as far as I can currently)
+tell.
+
+ex: help("".replace)
+
+- some string methods:
+
+c.replace("e", "i") = replace all e's with i's
+
+Strings:
+
+- Strings are zero indexed in python just like in other C based
+languages
+
+- string[index] will extract out the character at the index.
+
+- you can also do negative indexing, so string[-1] will show the last
+charcter in the string
+
+- to do a range you can do string[index:endindex], the upper bound
+is not included (like in c#).
+
+You can also do string[:3] and it will just take everything to index
+3, or string[3:].
+
+Lists:
+
+Lists are sequences of items.
+c = ["h", 2, "hello"].
+
+- Lists can hold multiple types, and are zero index based like arrays
+- Use dir(list) then help(method) to learn more.
+
+Tuples:
+
+- Tuples are similar to lists except they are immutable
+- Syntax: t = ("Hello", 3, 4)
+- You can unpack and pack tuples:
+
+In tuple packing, the values on the left are ‘packed’ together in a tuple:
+
+>>> b = ("Bob", 19, "CS")    # tuple packing
+In tuple unpacking, the values in a tuple on the right are ‘unpacked’ into the variables/names on the right:
+
+>>> b = ("Bob", 19, "CS")
+>>> (name, age, studies) = b    # tuple unpacking
+>>> name
+'Bob'
+>>> age
+19
+>>> studies
+'CS'
+
+http://openbookproject.net/thinkcs/python/english3e/tuples.html
+
+--------------
+
+Dictionaries:
+
+- Syntax d = {}
+- Key/value pairs, works in a similar or even exact way to C#
+d = {"Name":"John", "Surname":"Smith"}
+- Dictionary access in python is done with []
+ex. d["Name"] = John
+d = {"Name":"John", "Surname":"Smith", "Cities":("Porto", "San Diego", "Bali")}
+d["Cities"][2] = Bali
+
+Functions:
+
+Syntax: def functionname(parameters):
+
+At least one whitespace directly below the def tells python that
+the code belongs to the function (I use tab). A lot of people use
+3-4 spaces I believe.
+
+ex: def currency_converter(rate, euros):
+    dollars = euros*rate
+    return dollars
+
+- functions can have optional parameters if you give parameters a default
+value (just like in C#)
+
+- In python 2 you must use a floating point number like 60.0 when dividing
+- Python 3 doesn't require you to do that but does return a floating point
+number
+- With optional arguments they must always be placed at the end of the parameters
+
+- To run a python program in Atom idle type:
+
+python conditionals syntax:
+
+if a < 5:
+  print("less than 5")
+elif a == 5:
+    print("equal or greater than 5")
+else:
+    print("greater than 5")
+
+Loops in python:
+
+Two loops in python: For loop and while loop
+
+emails = ['me@gmail.com', 'you@hotmail.com', 'she@hotmail.com']
+
+for item in emails:
+    if 'gmail' in item:
+        print(item)
+
+        password = ''
+        while password != 'python123':
+            password=input('Enter password: ')
+            if password == 'python123':
+                print("You are logged in!")
+            else:
+                print("Sorry try again!")
+
+To use the for loop to iterate over more than one list at the same time:
+
+names = ['james', 'john', 'jack']
+email_domains = ['gmail', 'hotmail', 'yahoo']
+
+for i,j in zip(names, email_domains):
+    print(i, j)
