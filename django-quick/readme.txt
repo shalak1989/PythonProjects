@@ -1,0 +1,1 @@
+"This is the polls app from the official django tutorial. URL: https://docs.djangoproject.com/en/2.1/intro/tutorial01/" 
